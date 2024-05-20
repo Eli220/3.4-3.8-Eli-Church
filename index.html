@@ -4,13 +4,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> </script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <div class="nav-bar-a">
+    <div id="text" class="nav-item">Hutt Valley High School</div>
+    <form id="searchForm" class="nav-item">
+      <input type="text" id="searchTxt" placeholder="Search...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <div id="translate-box" class="nav-item">
+      <div id="google_translate_element"></div>
+    </div>
+    <div id="link-a" class="nav-link">
+      <button class="nav-button">About Our School</button>
+      <ul>
+        <div class="link-drop-down"><a>link</a></div>
+      </ul>
+    </div>
+    <div id="link-b" class="nav-link">
+      <button class="nav-button">Student Hub</button>
+      <ul>
+        <div class="link-drop-down"><a>link</a></div>
+      </ul>
+    </div>
+    <div id="link-c" class="nav-link">
+      <button class="nav-button">Parent Hub</button>
+      <ul>
+        <div class="link-drop-down"><a>link</a></div>
+      </ul>
+    </div>
+    <div id="link-d" class="nav-link">
+      <button class="nav-button">Contact Us</button>
+      <ul>
+        <div class="link-drop-down"><a>link</a></div>
+      </ul>
+    </div>
+    <div id="link-e" class="nav-link">
+      <button class="nav-button">Online Services</button>
+      <ul>
+        <div class="link-drop-down"><a>link</a></div>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-bar-b">
+    <div id="text" class="nav-item active">HVHS</div>
+    <div id="hamburger" class="nav-item"></div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="drop-down-links">
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
 
+
+
+  <div class="main-body">
+    <div class="body-item" id="body-left"></div>
+    <div class="body-item" id="body-right"></div>
+  </div>
+  <script src="modules/navBar.js"></script>
+</body>
 </html>

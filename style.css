@@ -1,4 +1,243 @@
-html {
+/*********************************************************/
+/****************** NAV BAR ******************************/
+/*********************************************************/
+
+.nav-bar-a {
+  display: grid;
+  background-color: black;
+  grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+  grid-template-rows: 60px 35px;
+  grid-template-areas:
+    'translate    text    text    search  search'
+    'link-a  link-b  link-c  link-d  link-e';
+}
+
+.nav-bar-b {
+  display: none;
+  background-color: black;
+  grid-template-columns: 5fr 5fr;
+  grid-template-rows: 56px;
+  grid-template-areas:
+    'text search';
+  overflow: hidden;
+}
+
+.nav-item {
+  background-color: black;
+  border-style: none;
+  color: white;
+}
+
+.nav-link {
+  border-right-style: solid;
+  border-color: white;
+}
+
+#text {
+  grid-area: text;
+}
+
+#searchForm {
+  grid-area: search;
+}
+
+#translate-box {
+  grid-area: translate;
+}
+
+#hamburger {
+  grid-area: hamburger;
+}
+
+#link-a {
+  grid-area: link-a;
+}
+
+#link-b {
+  grid-area: link-b;
+}
+
+#link-c {
+  grid-area: link-c;
+}
+
+#link-d {
+  grid-area: link-d;
+}
+
+#link-e {
+  grid-area: link-e;
+  border-style: none;
+}
+
+.nav-button {
+  background-color: black;
+  border: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.nav-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav-bar-a #text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  padding: 8px 8px 8px 16px;
+  text-align: center;
+}
+
+.nav-bar-a #searchForm {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  padding: 14px 16px;
+  text-align: right;
+  float: right;
+
+  input[type=text] {
+    border-style: none;
+    width: 60%;
+    border-radius: 12px 0px 0px 12px;
+    padding: 2px 10px;
+  }
+
+  button {
+    background-color: white;
+    border-radius: 0px 12px 12px 0px;
+    border-style: none;
+    height: 27px;
+    width: 27px;
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 0px 0px 0px 0px;
+    margin: -4px;
+  }
+
+  button:hover {
+    background-color: #e3e3e3;
+  }
+}
+
+#google_translate_element {
+  background-color: red;
+}
+
+.nav-link ul {
+  border-style: solid;
+  transition: all .5s ease;
+  height: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-link:hover ul {
+  background-color: white;
+  color: black;
+  opacity: 1;
+  transform: translateY(0);
+  height: 100px;
+  width: 100%;
+}
+
+.nav-bar-b .icon {
+  color: white;
+}
+
+.nav-bar-b #drop-down-links {
+  display: none;
+}
+
+.nav-bar-b a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.nav-bar-b a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nav-bar-b a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media (orientation: portrait) {
+  body {
+    background-color: red;
+  }
+
+  .nav-bar-a {
+    display: none;
+  }
+
+  .nav-bar-b {
+    display: grid;
+  }
+
+  .nav-bar-b #text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    padding: 8px 8px 8px 16px;
+    text-align: left;
+  }
+}
+
+/*********************************************************/
+/******************** BODY *******************************/
+/*********************************************************/
+
+.main-body {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  grid-template-rows: 600px;
+  grid-template-areas:
+    'body-left body-right';
+}
+
+.body-item {
   height: 100%;
   width: 100%;
+}
+
+#body-left {
+  background-color: #8fe0c0;
+  height: 100%;
+}
+
+#body-right {
+  
 }
