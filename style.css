@@ -10,7 +10,7 @@
   grid-template-areas:
     'translate    text    text    search  search'
     'link-a  link-b  link-c  link-d  link-e';
-}
+} 
 
 .nav-bar-b {
   display: none;
