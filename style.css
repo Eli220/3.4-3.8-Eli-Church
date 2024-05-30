@@ -1,5 +1,5 @@
 /*********************************************************/
-/****************** NAV BAR ******************************/
+/***************** NAV BAR LANDSCAPE *********************/
 /*********************************************************/
 
 .nav-bar-a {
@@ -19,7 +19,7 @@
   grid-template-rows: 56px;
   grid-template-areas:
     'text search';
-  overflow: hidden;
+  
 }
 
 .nav-item {
@@ -117,7 +117,6 @@
   }
 
   button {
-    background-color: white;
     border-radius: 0px 12px 12px 0px;
     border-style: none;
     height: 27px;
@@ -193,39 +192,24 @@
   color: black;
 }
 
-@media (orientation: portrait) {
-  body {
-    background-color: red;
-  }
-
-  .nav-bar-a {
-    display: none;
-  }
-
-  .nav-bar-b {
-    display: grid;
-  }
-
-  .nav-bar-b #text {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 28px;
-    padding: 8px 8px 8px 16px;
-    text-align: left;
-  }
-}
-
 /*********************************************************/
-/******************** BODY *******************************/
+/******************** BODY LANDSCAPE *********************/
 /*********************************************************/
 
-.main-body {
+.main-body-a {
   display: grid;
-  grid-template-columns: 5fr 5fr;
-  grid-template-rows: 600px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
   grid-template-areas:
     'body-left body-right';
+}
+
+.main-body-b {
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas:
+    'body-main';
 }
 
 .body-item {
@@ -234,10 +218,87 @@
 }
 
 #body-left {
+  grid-area: body-left;
   background-color: #8fe0c0;
+  color: black;
   height: 100%;
+  img {
+    object-fit: contain;
+    height:30%;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0px;
+  }
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 600;
+  }
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    padding: 0px 60px;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 #body-right {
-  
+  grid-area: body-right;
+  img {
+    object-fit: contain;
+    height:100%;
+    width:100%;
+  }
 }
+
+#body-main {
+  grid-area: body-main;
+  height:100%;
+  width:100%;
+}
+/*********************************************************/
+/***************** NAV BAR PORTRAIT **********************/
+/*********************************************************/
+
+@media (orientation: portrait) {
+  body {
+    margin: 0px;
+  }
+
+  .nav-bar-a {
+    display: none;
+  }
+
+  .nav-bar-b {
+    display: grid;
+    width: 100%;
+  }
+  .nav-bar-b #text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    padding: 8px 8px 8px 16px;
+    text-align: left;
+  }
+
+/*********************************************************/
+/******************** BODY PORTRAIT **********************/
+/*********************************************************/
+  .main-body-a {
+    display: none;
+  }
+
+  .main-body-b {
+    display: grid;
+    img{
+      height:540px;
+      width:860px;
+      object-fit: cover;
+
+    }
+  }
+  
+} /*Media Query End*/
