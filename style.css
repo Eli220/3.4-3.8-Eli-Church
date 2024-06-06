@@ -19,7 +19,6 @@
   grid-template-rows: 56px;
   grid-template-areas:
     'text search';
-  
 }
 
 .nav-item {
@@ -144,7 +143,6 @@
   height: 0;
   left: 0;
   opacity: 0;
-  position: absolute;
   display: block;
   margin: 0 auto;
   position: relative;
@@ -213,7 +211,7 @@
 }
 
 .body-item {
-  height: 100%;
+  height: 700px;
   width: 100%;
 }
 
@@ -221,7 +219,7 @@
   grid-area: body-left;
   background-color: #8fe0c0;
   color: black;
-  height: 100%;
+  height: 600px;
   img {
     object-fit: contain;
     height:30%;
@@ -247,9 +245,12 @@
 #body-right {
   grid-area: body-right;
   img {
-    object-fit: contain;
-    height:100%;
-    width:100%;
+    position: absolute;
+    z-index: -1;
+    height: 600px;
+    width: 50%;
+    object-fit: cover;
+    object-position: 70% 50%;
   }
 }
 
@@ -273,7 +274,6 @@
 
   .nav-bar-b {
     display: grid;
-    width: 100%;
   }
   .nav-bar-b #text {
     font-family: "Montserrat", sans-serif;
@@ -282,6 +282,7 @@
     font-size: 28px;
     padding: 8px 8px 8px 16px;
     text-align: left;
+    
   }
 
 /*********************************************************/
@@ -292,12 +293,14 @@
   }
 
   .main-body-b {
+    height:100%;
     display: grid;
     img{
-      height:540px;
-      width:860px;
+      position: absolute;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
-
+      object-position: 70% 100%;
     }
   }
   
