@@ -6,24 +6,11 @@ document.getElementById('searchTxt').value;
 }
 
 function hamburger() {
-    var x = document.getElementById("drop-down-links");
-    if (x.style.display === "block") {
-        x.style.display = "none";
+    var dropDowns = document.getElementById("drop-down-links");
+    if (dropDowns.style.display === "block") {
+        dropDowns.style.display = "none";
     } else {
-        x.style.display = "block";
+        dropDowns.style.display = "block";
     }
 }
 
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-        {
-            pageLanguage: 'en',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        },
-        'google_translate_element'
-    );
-}
-
-/**function googleTranslateElementInit() {
-new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}**/
