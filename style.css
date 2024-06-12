@@ -220,6 +220,8 @@
   background-color: #8fe0c0;
   color: black;
   height: 600px;
+  /*display: grid;
+  place-items: center; */
   img {
     object-fit: contain;
     height:30%;
@@ -240,6 +242,13 @@
     font-size: 20px;
     text-align: center;
   }
+  .home-left-button{
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+
+background-color: green;
+  }
 }
 
 #body-right {
@@ -251,6 +260,21 @@
     width: 50%;
     object-fit: cover;
     object-position: 70% 50%;
+  }
+  .home-right-button {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 15%;
+    display: block;
+  }
+  #student-button {
+    transform: translate(-50%, 760%);
+    -ms-transform: translate(-50%, 760%);
+  }
+  #parent-button {
+    transform: translate(-50%, 640%);
+    -ms-transform: translate(-50%, 640%);
   }
 }
 
