@@ -8,8 +8,8 @@
   grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
   grid-template-rows: 60px 35px;
   grid-template-areas:
-    'translate    text    text    search  search'
-    'link-a  link-b  link-c  link-d  link-e';
+    'translate  text    text    search  search'
+    'link-a     link-b  link-c  link-d  link-e';
 } 
 
 .nav-bar-b {
@@ -246,8 +246,14 @@
     margin-left: auto;
     margin-right: auto;
     display:block;
-
-background-color: green;
+    background-color: #8fe0c0;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    width: 30%;
+    margin-top: 30px;
   }
 }
 
@@ -267,6 +273,12 @@ background-color: green;
     left: 75%;
     width: 15%;
     display: block;
+    background-color: #8fe0c0;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
   }
   #student-button {
     transform: translate(-50%, 760%);
