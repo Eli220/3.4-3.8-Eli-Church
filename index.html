@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -21,9 +21,10 @@
 <body>
 <!-------------- NAV -------------->
   <div class="nav-bar-a">
-    <div id="text" class="nav-item">Hutt Valley High School</div>
+    <h1 id="text" class="nav-item">Hutt Valley High School</h1>
     <form id="searchForm" class="nav-item">
       <input type="text" id="searchTxt" placeholder="Search...">
+      <label for="searchTxt"></label>
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
     <div id="nav-logo" class="nav-item">
@@ -99,7 +100,13 @@
   
   <div class="main-body-b">
     <div class="body-item" id="body-main">
-      <img src="images/2-12-gradient.jpg" alt="HVHS">
+      <img class="mobile-background" src="images/2-12-gradient.jpg" alt="HVHS">
+      <img class="mobile-logo" src="images/HVH_LOGO.png" alt="HVHS">
+      <div class="button-grid">
+        <button class="portrait-home-button" id="learn-button-portrait">About Our School</button>
+        <button class="portrait-home-button" id="parent-button-portrait">Parent Hub</button>
+        <button class="portrait-home-button" id="student-button-portrait">Student Hub</button>
+      </div>
     </div>
   </div>
   <script src="/modules/navBar.js"></script>
