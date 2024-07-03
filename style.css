@@ -14,13 +14,6 @@
 
 .nav-bar-b {
   display: none;
-  background-color: black;
-  grid-template-columns: 5fr 5fr;
-  grid-template-rows: 56px;
-  grid-template-areas:
-    'text search';
-  overflow: hidden;
-  position: relative;
 }
 
 .nav-item {
@@ -31,6 +24,8 @@
 
 .nav-link {
   border-right-style: solid;
+  border-left-style: solid;
+  border-width: 2px;
   border-color: white;
 }
 
@@ -56,6 +51,7 @@
 
 #link-a {
   grid-area: link-a;
+  border-left-style: none;
 }
 
 #link-b {
@@ -72,7 +68,7 @@
 
 #link-e {
   grid-area: link-e;
-  border-style: none;
+  border-right-style: none;
 }
 
 .nav-button {
@@ -147,6 +143,7 @@
 }
 
 .nav-link ul {
+  border-top: 0px;
   border-style: solid;
   transition: all .5s ease;
   height: 0;
@@ -206,10 +203,11 @@
 
 .main-body-a {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100%;
+  grid-template-columns: 2fr 3fr 3fr 2fr;
+  grid-template-rows: 100% 100%;
   grid-template-areas:
-    'body-left body-right';
+    'body-left   body-middle  body-middle body-right'
+    'student-hub student-hub  parent-hub  parent-hub';
 }
 
 .main-body-b {
@@ -225,14 +223,15 @@
   width: 100%;
 }
 
-#body-left {
-  grid-area: body-left;
+#body-middle {
+  z-index: -1;
+  grid-area: body-middle;
   background-color: #8fe0c0;
   color: black;
   height: 600px;
-
-  /*display: grid;
-  place-items: center; */
+  box-shadow: 0px 9px 0px 0px white, 0px -9px 0px 0px white, 
+              -1px 0 40px -4px black, -1px 0 40px -4px black;
+  
   img {
     object-fit: contain;
     height: 30%;
@@ -256,7 +255,7 @@
     text-align: center;
   }
 
-  .home-left-button {
+  .home-learn-button {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -272,19 +271,38 @@
   }
 }
 
-#body-right {
-  grid-area: body-right;
-
+#body-left {
+  grid-area: body-left;
   img {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     height: 600px;
-    width: 50%;
+    width: 20%;
     object-fit: cover;
-    object-position: 70% 50%;
+    object-position: 0% 50%;
   }
+}
 
-  .home-right-button {
+#body-right {
+  grid-area: body-right;
+  img {
+    position: absolute;
+    z-index: -2;
+    height: 600px;
+    width: 20%;
+    object-fit: cover;
+    object-position: 100% 50%;
+  }
+}
+
+#student-hub {
+  grid-area: student-hub;
+}
+
+#parent-hub {
+  grid-area: parent-hub;
+}
+/*  .home-right-button {
     position: absolute;
     top: 50%;
     left: 75%;
@@ -308,7 +326,7 @@
     transform: translate(-50%, 640%);
     -ms-transform: translate(-50%, 640%);
   }
-}
+*/
 
 #body-main {
   grid-area: body-main;
@@ -330,7 +348,17 @@
   }
 
   .nav-bar-b {
-    display: grid;
+    display: block;
+    /**display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 56px;
+    grid-template-areas:
+      'text search';**/
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
   }
 
   .nav-bar-b #text {
@@ -407,5 +435,8 @@
 
   }
 }
+
+
+
 
 /*Media Query End*/

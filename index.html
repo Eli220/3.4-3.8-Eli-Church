@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Hutt Valley High School">
+  <meta name="keywords" content="School, HVHS, Hutt valley, Hutt valley high school">
+  <meta name="author" content="Eli Church">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +32,7 @@
     </form>
     <div id="nav-logo" class="nav-item">
       <img 
-        src="images/logo-white.png" alt="logo">
+        src="images/logo-white.png" alt="HVHS-logo-desktop">
     </div>
     <!--<div id="translate-box" class="nav-item">
       <div id="google_translate_element"></div>
@@ -67,13 +70,25 @@
   </div>
   
   <div class="nav-bar-b">
+    <!--<div class="mobile-container">
+
+    <div class="topnav">
+      <a href="#home" class="active">Logo</a>
+      <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    </div>-->
     <div id="text" class="nav-item active">HVHS</div>
     <div id="hamburger" class="nav-item"></div>
-    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
     <a href="javascript:void(0);" class="icon" onclick="hamburger()">
       <i class="fa fa-bars"></i>
     </a>
-    <!-- Navigation links (hidden by default) -->
     <div id="drop-down-links">
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
@@ -84,24 +99,46 @@
 <!-------------- BODY -------------->
   
   <div class="main-body-a">
+    
     <div class="body-item" id="body-left">
-      <img src="images/HVH_LOGO.png" alt="HVHS">
+      <img src="images/2-12.jpg" alt="HVHS-background-desktop">
+    </div>
+    
+    <div class="body-item" id="body-middle">
+      <img src="images/HVH_LOGO.png" alt="HVHS-logo-body">
       <h2>About Our School</h2>
       <h3>Hutt Valley High School, Te Kura Tuarua o Te Awakairangi was founded in 1926. We focus on providing a high-quality education that ensures our students have the best opportunity to develop their strengths and talents and achieve success in a way that gives them a purposeful and rewarding future life.</h3>
-      <button class="home-left-button">Learn More</button>
+      <button class="home-learn-button">Learn More</button>
     </div>
     
     <div class="body-item" id="body-right">
-      <img src="images/2-12.jpg" alt="HVHS">
-      <button class="home-right-button" id="parent-button">Parent Hub</button>
-      <button class="home-right-button" id="student-button">Student Hub</button>
+      <img src="images/2-12.jpg" alt="HVHS-background-desktop">
     </div>
+
+
+    <div class="body-item" id="student-hub">
+      <img>
+      <!--<button class="home-right-button" id="student-button">Student Hub</button>-->
+    </div>
+    <div class="body-item" id="parent-hub">
+      <img>
+      <!--<button class="home-right-button" id="parent-button">Parent Hub</button>-->
+    </div>
+    
+
+    
+    
+    
+    
   </div>
+  <!--<img src="images/7-2 (1).jpg">
+  <img src="images/1-4.jpg">-->
   
   <div class="main-body-b">
+      
     <div class="body-item" id="body-main">
-      <img class="mobile-background" src="images/2-12-gradient.jpg" alt="HVHS">
-      <img class="mobile-logo" src="images/HVH_LOGO.png" alt="HVHS">
+      <img class="mobile-background" src="images/2-12-gradient.jpg" alt="HVHS-background-mobile">
+      <img class="mobile-logo" src="images/HVH_LOGO.png" alt="HVHS-logo-mobile">
       <div class="button-grid">
         <button class="portrait-home-button" id="learn-button-portrait">About Our School</button>
         <button class="portrait-home-button" id="parent-button-portrait">Parent Hub</button>
