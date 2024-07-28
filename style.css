@@ -305,6 +305,45 @@
   width: 100%;
 }
 
+#parent-body-a {
+  
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 100% 100px;
+  grid-template-areas:
+    'left-img   parent-banner  right-img'
+    'left-bar   parent-main    right-bar';
+}  
+
+.banner-image {
+  width: 100%;
+  position: absolute;
+  object-fit: contain;
+  grid-area: parent-banner;
+}
+
+#parent-main {
+  grid-area: parent-main;
+  background-color: #32a0ad;
+  width: 100%;
+}
+
+.left-bar {
+  #left-img {
+    grid-area: left-img;
+  }
+  width: 100%;
+  object-fit: contain;
+}
+
+.right-bar {
+  #right-img {
+    grid-area: right-img;
+  }
+  width: 100%;
+  object-fit: contain;
+}
+
 /*********************************************************/
 /***************** NAV BAR PORTRAIT **********************/
 /*********************************************************/
