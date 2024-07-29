@@ -6,7 +6,7 @@
   display: grid;
   background-color: black;
   grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
-  grid-template-rows: 70px 35px;
+  grid-template-rows: 80px 40px;
   grid-template-areas:
     'logo    text    text    text  search'
     'link-a  link-b  link-c  link-d  link-e';
@@ -25,7 +25,7 @@
 .nav-link {
   border-right-style: solid;
   border-left-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: white;
 }
 
@@ -76,15 +76,16 @@
   border: none;
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 500;
   width: 100%;
   height: 100%;
   text-align: center;
   display: inline-block;
-  font-size: 15px;
+  font-size: 18px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 0px;
+  padding-bottom: 6px;
 }
 
 .nav-button:hover {
@@ -94,7 +95,7 @@
 
 .nav-bar-a #text {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   font-size: 30px;
   padding: 1px 8px 8px 12px;
@@ -104,7 +105,7 @@
 .nav-bar-a img {
   width: 100%;
   height: 100%;
-  padding: 8px;
+  padding: 12px;
   object-fit: contain;
 }
 
@@ -113,7 +114,7 @@
   font-weight: 600;
   font-style: normal;
   font-size: 15px;
-  padding: 20px 16px;
+  padding: 20px 25px;
   text-align: right;
   float: right;
 
@@ -167,7 +168,6 @@
   width: 100%;
 }
 
-
 /*********************************************************/
 /******************** BODY LANDSCAPE *********************/
 /*********************************************************/
@@ -199,14 +199,14 @@
   grid-area: body-middle;
   background-color: #8fe0c0;
   color: black;
-  height: 600px;
+  height: 900px;
   box-shadow: 0px 9px 0px 0px white, 0px -9px 0px 0px white, 
               -1px 0 40px -4px black, -1px 0 40px -4px black;
   
   img {
     object-fit: contain;
-    height: 30%;
-    width: 30%;
+    height: 25%;
+    width: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -247,7 +247,7 @@
   img {
     position: absolute;
     z-index: -2;
-    height: 600px;
+    height: 900px;
     width: 20%;
     object-fit: cover;
     object-position: 0% 50%;
@@ -259,7 +259,7 @@
   img {
     position: absolute;
     z-index: -2;
-    height: 600px;
+    height: 900px;
     width: 20%;
     object-fit: cover;
     object-position: 100% 50%;
@@ -273,31 +273,6 @@
 #parent-hub {
   grid-area: parent-hub;
 }
-/*  .home-right-button {
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    width: 15%;
-    display: block;
-    background-color: #8fe0c0;
-    color: black;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 20px;
-    border-radius: 4px;
-  }
-
-  #student-button {
-    transform: translate(-50%, 760%);
-    -ms-transform: translate(-50%, 760%);
-  }
-
-  #parent-button {
-    transform: translate(-50%, 640%);
-    -ms-transform: translate(-50%, 640%);
-  }
-*/
 
 #body-main {
   grid-area: body-main;
@@ -306,12 +281,11 @@
 }
 
 #parent-body-a {
-  
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 100% 100px;
+  grid-template-rows: 1fr 500px;
   grid-template-areas:
-    'left-img   parent-banner  right-img'
+    'left-img   parent-title   right-img'
     'left-bar   parent-main    right-bar';
 }  
 
@@ -322,28 +296,90 @@
   grid-area: parent-banner;
 }
 
+#left-bar {
+  width: 100%;
+  object-fit: contain;
+  grid-area:  left-bar;
+  background-color: #32a0ad;
+}
+#left-img {
+  grid-area: left-img;
+  width: 100%;
+}
+
+#right-bar {
+  width: 100%;
+  object-fit: contain;
+  grid-area: right-bar;
+  background-color: #32a0ad;
+}
+#right-img {
+  width: 100%;
+  grid-area: right-img;
+}
+
+#parent-title {
+  grid-area: parent-title;
+  text-align: center;
+  color: #32a0ad;
+  font-size: 5vw;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
 #parent-main {
   grid-area: parent-main;
-  background-color: #32a0ad;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    'kamar schoolbridge facebook map calendar news'
+    'parent-links parent-links parent-links events events event';
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.left-bar {
-  #left-img {
-    grid-area: left-img;
-  }
-  width: 100%;
-  object-fit: contain;
+.icon-image {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.right-bar {
-  #right-img {
-    grid-area: right-img;
-  }
-  width: 100%;
-  object-fit: contain;
+#parent-links {
+  grid-area: parent-links;
+  font-family: "Montserrat", sans-serif;
 }
 
+#kamar {
+  grid-area: kamar;
+}
+
+#schoolbridge {
+  grid-area: schoolbridge;
+}
+
+#facebook {
+  grid-area: facebook;
+}
+
+#map {
+  grid-area: map;
+}
+
+#calendar {
+  grid-area: calendar;
+}
+
+#news {
+  grid-area: news;
+}
+
+#events {
+  grid-area: events;
+}
 /*********************************************************/
 /***************** NAV BAR PORTRAIT **********************/
 /*********************************************************/

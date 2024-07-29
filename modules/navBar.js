@@ -9,7 +9,8 @@ function hamburger() {
     var dropDowns = document.getElementById("drop-down-links");
     if (dropDowns.style.display === "block") {
         dropDowns.style.display = "none";
-    } else {
+    }     
+    else {
         dropDowns.style.display = "block";
     }
 }
