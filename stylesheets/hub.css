@@ -1,0 +1,194 @@
+#parent-body-a {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 500px;
+  grid-template-areas:
+    'left-img   parent-title   right-img'
+    'left-bar   parent-main    right-bar';
+}  
+
+#parent-body-b {
+  display: none;
+}
+
+.banner-image {
+  width: 100%;
+  position: absolute;
+  object-fit: contain;
+  grid-area: parent-banner;
+}
+
+#left-bar {
+  width: 100%;
+  object-fit: contain;
+  grid-area:  left-bar;
+  background-color: #32a0ad;
+}
+#left-img {
+  grid-area: left-img;
+  width: 100%;
+}
+
+#right-bar {
+  width: 100%;
+  object-fit: contain;
+  grid-area: right-bar;
+  background-color: #32a0ad;
+}
+#right-img {
+  width: 100%;
+  grid-area: right-img;
+}
+
+#parent-title {
+  grid-area: parent-title;
+  text-align: center;
+  color: #32a0ad;
+  font-size: 5vw;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
+#parent-main {
+  grid-area: parent-main;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    'kamar schoolbridge facebook map calendar news'
+    'parent-links parent-links parent-links events events events';
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.icon-image {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#parent-links {
+  margin-left: 60px;
+  margin-right: auto;
+  grid-area: parent-links;
+  padding-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  h3 {
+    font-family: "Montserrat", sans-serif;
+  }
+  li {
+    cursor: pointer;
+  }
+}
+
+#absences {
+  display: none;
+}
+
+#frontOffice {
+  display: none;
+}
+
+#slt {
+  display: none;
+}
+
+#allStaff {
+  display: none;
+}
+
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  width: 60%;
+  padding: 4px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  th {
+    color: white;
+    background-color: black;
+  }
+  .Caltime {
+    width: 25%;
+  }
+  .Calevent{
+    width: 75%;
+    padding-left: 8px;
+  }
+}
+
+
+
+@media (orientation: portrait) {
+
+  #parent-body-a {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 500px;
+    grid-template-areas:
+      'parent-title'
+      'parent-main';
+  }  
+  
+  #parent-title {
+    font-size: 12vw;
+  }
+  
+  #parent-main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'kamar schoolbridge facebook' 
+    'map calendar news'
+    'parent-links parent-links parent-links' 
+    'events events event';
+  }
+  #left-bar {
+    display: none;
+  }
+  #left-img {
+    display: none;
+  }
+  #right-bar {
+    display: none;
+  }
+  #right-img {
+    display: none;
+  }
+  .icon-image {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+  
+  #parent-links {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 30px;
+  }
+  
+  table, th, td {
+    margin-left: 10px;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  /**#parent-body-b {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      'kamar schoolbridge facebook map calendar news'
+      'parent-links parent-links parent-links events events event';
+    padding-left: 40px;
+    padding-right: 40px;
+  }**/
+}

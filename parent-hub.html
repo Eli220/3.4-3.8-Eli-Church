@@ -18,7 +18,9 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>Hutt Valley High School</title>
   <link rel="icon" type="image/x-icon" href="/images/page-icon.png">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/hub.css" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/home.css" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/grid-id.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -114,17 +116,115 @@
       <div id="parent-links">
         <h3>Contact Links</h3>
         <ul>
-          <li>Absences</li>
-          <li>Senior Leadership</li>
-          <li>All Staff Emails</li>
+          <li onclick="linksShow('absences')"><u>Absences</u>
+            <ul id="absences">
+              <li>Phone: 0123456789</li>
+              <li><a>Email: example@gmail.com</a></li>
+            </ul>
+          </li>
+          <li onclick="linksShow('frontOffice')"><u>Front Office</u>
+            <ul id="frontOffice">
+              <li>Phone: 0123456789</li>
+              <li><a>Email: example@gmail.com</a></li>
+            </ul>
+          </li>
+          <li onclick="linksShow('slt')"><u>Senior Leadership</u> 
+            <ul id="slt">
+              <li>Principal: example@gmail.com</li>
+              <li>Deputy Principal: example@gmail.com</li>
+            </ul>
+          </li>
+          <li onclick="linksShow('allStaff')"><u>All Staff Emails</u>  
+            <ul id="allStaff">
+              <li><a><u>List of all staff with addresses</u></a></li>
+            </ul>
+          </li>
         </ul>
-        
       </div>
+      
       <div id="events">
-        
+        <table>
+          <tr>
+            <th colspan="2">Today</th>
+          </tr>
+          <tr>
+            <td class="Caltime">9:00 AM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">10:00 AM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">11:00 AM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">12:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">1:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">2:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">3:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">4:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
       </div>
     </div>
   </div>
+  
+  <div id="parent-body-b">
+    <div id="kamar">
+      <img src="images/kamar.jpg" class="icon-image">
+    </div>
+    <div id="schoolbridge">
+      <img src="images/schoolbridge.png" class="icon-image">
+    </div>
+    <div id="facebook">
+      <img src="images/facebook.png" class="icon-image">
+    </div>
+    <div id="map">
+      <img src="images/news.jpg" class="icon-image">
+    </div>
+    <div id="news">
+      <img src="images/calendar.png" class="icon-image">
+    </div>
+    <div id="calendar">
+      <img src="images/map.jpg" class="icon-image">
+    </div>
+  </div>
+
+  <!--<div class="footer-a">
+    <h4 class="ftcol1">Address</h4>
+    <p class="ftcol1"></p>
+    <p class="ftcol1"></p>
+    <p class="ftcol1"></p>
+    <h4 class="ftcol2">Postal Address</h4>
+    <p class="ftcol2"></p>
+    <p class="ftcol2"></p>
+    <p class="ftcol2"></p>
+    <p class="ftcol2"></p>
+    <h4 class="ftcol3">Quick Contact</h4>
+    <p class="ftcol3"></p>
+    <p class="ftcol3"></p>
+    <p class="ftcol3"></p>
+    <p class="ftcol3"></p>
+    <h4 class="ftcol4">Social Media</h4>
+    <p class="ftcol4"></p>
+    <p class="ftcol4"></p>
+    <p class="ftcol4"></p>
+  </div>-->
+  
   <script src="/modules/navBar.js"></script>
 </body>
 </html>

@@ -15,3 +15,13 @@ function hamburger() {
     }
 }
 
+function linksShow(id) {
+    var dropDowns = document.getElementById(id);
+    if (dropDowns.style.display === "block") {
+        dropDowns.style.display = "none";
+    }     
+    else {
+        dropDowns.style.display = "block";
+    }
+}
+
