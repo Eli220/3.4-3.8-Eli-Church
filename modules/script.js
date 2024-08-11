@@ -1,3 +1,5 @@
+
+
 document.getElementById('searchForm').onsubmit = function() {
     console.log("plug")
     window.location = 'http://www.google.com/search?q=site:ivvseztzqq-2403522582-a.codehs.me/index.html ' + 
@@ -25,3 +27,7 @@ function linksShow(id) {
     }
 }
 
+
+function linkClick(url) {
+    window.location = url
+}
