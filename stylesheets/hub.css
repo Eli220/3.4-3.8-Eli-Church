@@ -1,14 +1,17 @@
 #parent-body-a {
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 1fr 500px;
+  /**grid-template-rows: auto auto auto auto;**/
   grid-template-areas:
     'left-img   parent-title   right-img'
-    'left-bar   parent-main    right-bar';
+    'left-bar   parent-main    right-bar'
+    'left-grad  blank          right-grad'
+    'footer     footer         footer';
 }  
 
-#parent-body-b {
+#ft-gradient {
   display: none;
+  grid-area: ft-grad;
 }
 
 .banner-image {
@@ -28,6 +31,10 @@
   grid-area: left-img;
   width: 100%;
 }
+#left-grad {
+  grid-area: left-grad;
+  width: 100%;
+}
 
 #right-bar {
   width: 100%;
@@ -38,6 +45,10 @@
 #right-img {
   width: 100%;
   grid-area: right-img;
+}
+#right-grad {
+  grid-area: right-grad;
+  width: 100%;
 }
 
 #parent-title {
@@ -50,12 +61,17 @@
   padding: 20px;
 }
 
+#parent-mob-title{
+  display: none;
+  grid-area: parent-mob-t;
+}
+
 #parent-main {
   grid-area: parent-main;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 3fr;
+  /**grid-template-rows: 1fr 3fr;**/
   grid-template-areas:
     'kamar schoolbridge facebook map calendar news'
     'parent-links parent-links parent-links events events events';
@@ -70,8 +86,8 @@
   margin-left: auto;
   margin-right: auto;
   border: 3px solid black;
-  padding: 4px;
-  border-radius: 8px;
+  padding: 6px;
+  border-radius: 16px;
 }
 
 .icon-text {
@@ -79,19 +95,24 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1.2vw;
   font-weight: 450;
+  margin-top: 5px;
 }
 
 #parent-links {
   margin-left: 60px;
   margin-right: auto;
   grid-area: parent-links;
-  padding-top: 30px;
+  padding-top: 15px;
   font-family: "Montserrat", sans-serif;
   h3 {
     font-family: "Montserrat", sans-serif;
+    font-size: 3vw;
+    font-weight: 450;
   }
   li {
     cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 450;
   }
 }
 
@@ -115,7 +136,7 @@ table, th, td {
   margin-left: auto;
   margin-right: auto;
   font-family: "Montserrat", sans-serif;
-  width: 60%;
+  width: 80%;
   padding: 4px;
   border: 1px solid black;
   border-collapse: collapse;
@@ -137,31 +158,90 @@ table, th, td {
 @media (orientation: portrait) {
 
   #parent-body-a {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 500px;
+    /**grid-template-rows: 100% 100% 100%;**/
     grid-template-areas:
+      /**'parent-mob-t'**/
       'parent-title'
-      'parent-main';
+      'parent-main'
+      'ft-grad'
+      'footer';
+    background-color: #32a0ad;
+    color: white;
   }  
-  
+  #ft-gradient {
+    display: block;
+    width: 100%;
+  }
   #parent-title {
     font-size: 12vw;
+    color: white;
   }
+  /**#parent-mob-title{
+    display: inline;
+    width: 100%;
+  }**/
   
   #parent-main {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /**grid-template-rows: 1fr 0.2fr 1fr 1fr;**/
     grid-template-areas:
     'kamar schoolbridge facebook' 
     'map calendar news'
     'parent-links parent-links parent-links' 
     'events events event';
+    img {
+      width: 80%;
+    }
+    /**padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;**/
   }
+
+  table, th, td {
+    border: 1px solid white;
+    width: max-content;
+    
+    th {
+      color: #32a0ad;
+      background-color: white;
+    }
+  }
+
+  .icon-image {
+    border: 2px solid black;
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+  }
+  .icon-text {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5vw;
+    font-weight: 550;
+  }
+
+  #parent-links {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 30px;
+    h3 {
+      font-size: 9vw;
+      font-weight: 450;
+    }
+    li {
+      font-size: 5vw;
+      font-weight: 450;
+    }
+  }
+
   #left-bar {
     display: none;
   }
   #left-img {
+    display: none;
+  }
+  #left-grad {
     display: none;
   }
   #right-bar {
@@ -170,24 +250,8 @@ table, th, td {
   #right-img {
     display: none;
   }
-  .icon-image {
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-  }
-  
-  #parent-links {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-top: 30px;
-  }
-  
-  table, th, td {
-    margin-left: 10px;
-    margin-right: auto;
-    width: 100%;
+  #right-grad {
+    display: none;
   }
   
   /**#parent-body-b {

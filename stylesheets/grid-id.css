@@ -37,15 +37,11 @@
 }
 
 
+/**#ft-btm {
+  grid-area: ft-btm;
+}**/
 
 
-#student-hub {
-  grid-area: student-hub;
-}
-
-#parent-hub {
-  grid-area: parent-hub;
-}
 
 #body-main {
   grid-area: body-main;
@@ -75,6 +71,9 @@
 
 #news {
   grid-area: news;
+  img {
+    padding: 8px;
+  }
 }
 
 #events {
@@ -93,4 +92,20 @@
 #parent-button-portrait {
   grid-area: parent;
   right: 50%;
+}
+
+.ftcol1 {
+  grid-area: ftcol1;
+}
+
+.ftcol2 {
+  grid-area: ftcol2;
+}
+
+.ftcol3 {
+  grid-area: ftcol3;
+}
+
+.ftcol4 {
+  grid-area: ftcol4;
 }

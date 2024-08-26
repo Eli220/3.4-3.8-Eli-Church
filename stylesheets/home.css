@@ -1,3 +1,7 @@
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
 /*********************************************************/
 /***************** NAV BAR LANDSCAPE *********************/
 /*********************************************************/
@@ -6,7 +10,7 @@
   display: grid;
   background-color: black;
   grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
-  grid-template-rows: 80px 40px;
+  grid-template-rows: 90px 40px;
   grid-template-areas:
     'logo    text    text    text  search'
     'link-a  link-b  link-c  link-d  link-e';
@@ -34,16 +38,16 @@
   border: none;
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   width: 100%;
   height: 100%;
   text-align: center;
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 0px;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
 }
 
 .nav-button:hover {
@@ -51,12 +55,12 @@
   color: black;
 }
 
-.nav-bar-a #text {
+.nav-bar-a h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 30px;
-  padding: 1px 8px 8px 12px;
+  padding: 8px 8px 8px 12px;
   text-align: center;
 }
 
@@ -133,10 +137,14 @@
 .main-body-a {
   display: grid;
   grid-template-columns: 2fr 3fr 3fr 2fr;
-  grid-template-rows: 100% 100%;
+  /**grid-template-rows: 100% 100%;**/
   grid-template-areas:
     'body-left   body-middle  body-middle body-right'
     'student-hub student-hub  parent-hub  parent-hub';
+  .hub-img{
+    object-fit:contain;
+    width: 100%;
+  }
 }
 
 .main-body-b {
@@ -158,8 +166,8 @@
   background-color: #8fe0c0;
   color: black;
   height: 900px;
-  box-shadow: 0px 9px 0px 0px white, 0px -9px 0px 0px white, 
-              -1px 0 40px -4px black, -1px 0 40px -4px black;
+  box-shadow:  
+  -1px 0 40px -4px black, -1px 0 40px -4px black;
   
   img {
     object-fit: contain;
@@ -184,7 +192,7 @@
     text-align: center;
   }
 
-  .home-learn-button {
+  .home-button {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -194,9 +202,12 @@
     font-weight: 600;
     font-style: normal;
     font-size: 20px;
-    width: 30%;
-    margin-top: 30px;
+    width: 50%;
+    margin-top: 40px;
     border-radius: 4px;
+  }
+  .hub-button {
+    margin-top: 10px;
   }
 }
 
@@ -224,29 +235,71 @@
   }
 }
 
-.footer-a {
-  background-color: blue;
+#body-lower{
+  height: 100px;
+  width: 100%;
+  box-shadow:  
+  0px -60px 40px -4px black, 0px 0px 40px -4px black;
+  /**display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'student-hub parent-hub';**/
+}
+
+#student-hub-button {
+  grid-area: student-hub;
+}
+
+#parent-hub-button {
+  grid-area: parent-hub;
+}
+
+/*********************************************************/
+/***************** FOOTER LANDSCAPE **********************/
+/*********************************************************/
+
+#footer-a {
+  grid-area: footer;
+  /**background-color: #1a5057;**/
+  color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100%;
+  grid-template-rows: 80% 20%;
   grid-template-areas:
-    'ftcol1 ftcol2 ftcol3 ftcol4';
+    'ftcol1 ftcol2 ftcol3 ftcol4'
+    'ft-btm ft-btm ft-btm ft-btm';
+  h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+  }
+  .ftcolgen {
+    padding: 20px 20px 20px 80px;
+  }
+  .ft-a {
+    display: block;
+  }
+  .ft-b {
+    display: none;
+  }
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+  }
+  #ft-btm {
+    grid-area: ft-btm;
+    padding-left: 25px;
+  }
 }
 
-.ftcol1 {
-  grid-area: ftcol1;
+.ft-home {
+  background-color: black;
 }
 
-.ftcol2 {
-  grid-area: ftcol2;
-}
-
-.ftcol3 {
-  grid-area: ftcol3;
-}
-
-.ftcol4 {
-  grid-area: ftcol4;
+.ft-hub {
+  background-color: #1a5057;
 }
 
 /*********************************************************/
@@ -277,13 +330,13 @@
     z-index: 2;
   }
 
-  .nav-bar-b #text {
+  .nav-bar-b #text-b {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 28px;
     padding: 8px 8px 8px 16px;
-    text-align: left;
+    text-align: center;
   }
   
   .nav-bar-b .icon {
@@ -292,9 +345,11 @@
 
   .nav-bar-b #drop-down-links {
     display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
   }
 
-  .nav-bar-b a {
+  .nav-b-button {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
@@ -303,15 +358,23 @@
     background-color: black;
   }
 
-  .nav-bar-b a.icon {
+  #burger {
     background: black;
-    display: block;
     position: absolute;
     right: 0;
     top: 0;
   }
 
-  .nav-bar-b a:hover {
+  #home {
+    background: black;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    size: 100%;
+  }
+
+  .nav-b-button div:hover {
     background-color: #ddd;
     color: black;
   }
@@ -325,11 +388,12 @@
   }
 
   .main-body-b {
-    height: 100%;
+    height: 659px;
     display: grid;
 
     .mobile-background {
       position: absolute;
+      z-index: 0;
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -351,7 +415,8 @@
       grid-template-areas:
         'learn'
         'student' 
-        'parent';
+        'parent'
+        'footer';
       transform: translate(33.5%, 300%);
       -ms-transform: translate(33.5%, 300%);
       width: 60%;
@@ -369,6 +434,44 @@
       height: 40px;
     }
   }
-}
 
+
+/*********************************************************/
+/***************** FOOTER PORTRAIT ***********************/
+/*********************************************************/
+
+  #footer-a {
+    grid-area: footer;
+    display: grid;
+    z-index: 1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 35% 5%;
+    grid-template-areas:
+      'ftcol1 ftcol2'
+      'ftcol3 ftcol4'
+      'ft-btm ft-btm';
+    .ftcolgen {
+      padding: 20px 20px 20px 20px;
+      height: 100px;
+    }
+    .ft-a {
+      display: none;
+    }
+    .ft-b {
+      display: block;
+    }
+  }
+  .ft-txt1{
+    display: none;
+  }
+  .ft-txt2 {
+    display: none;
+  }
+  .ft-txt3 {
+    display: none;
+  }
+  .ft-txt4 {
+    display: none;
+  }
+}
 /*Media Query End*/

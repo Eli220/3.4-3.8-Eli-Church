@@ -7,14 +7,11 @@
   <meta name="description" content="Hutt Valley High School">
   <meta name="keywords" content="School, HVHS, Hutt valley, Hutt valley high school">
   <meta name="author" content="Eli Church">
-  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> </script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>Hutt Valley High School</title>
   <link rel="icon" type="image/x-icon" href="/images/page-icon.png">
@@ -29,71 +26,48 @@
     <form id="searchForm" class="nav-item">
       <input type="text" id="searchTxt" placeholder="Search...">
       <label for="searchTxt"></label>
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <button type="submit" title="search-button"><i class="fa fa-search"></i></button>
     </form>
     <div id="nav-logo" class="nav-item">
-      <img 
-        src="images/logo-white.png" alt="HVHS-logo-desktop">
+      <img src="images/logo-white.png" alt="HVHS-logo-desktop">
     </div>
-    <!--<div id="translate-box" class="nav-item">
-      <div id="google_translate_element"></div>
-    </div>-->
     <div id="link-a" class="nav-link">
-      <button class="nav-button">Parent Hub</button>
-      <ul>
-        <div class="link-drop-down"><a>link</a></div>
-      </ul>
+      <button class="nav-button" onclick="linkClick('parent-hub.html')">Parent Hub</button>
     </div>
     <div id="link-b" class="nav-link">
-      <button class="nav-button">Student Hub</button>
-      <ul>
-        <div class="link-drop-down"><a>link</a></div>
-      </ul>
+      <button class="nav-button" onclick="linkClick('student-hub.html')">Student Hub</button>
     </div>
     <div id="link-c" class="nav-link">
-      <button class="nav-button">About Our School</button>
-      <ul>
-        <div class="link-drop-down"><a>link</a></div>
-      </ul>
+      <button class="nav-button" onclick="linkClick('about.html')">About Our School</button>
     </div>
     <div id="link-d" class="nav-link">
       <button class="nav-button">Contact Us</button>
       <ul>
-        <div class="link-drop-down"><a>link</a></div>
+        <li class="link-drop-down">link</li>
       </ul>
     </div>
     <div id="link-e" class="nav-link">
       <button class="nav-button">Online Services</button>
       <ul>
-        <div class="link-drop-down"><a>link</a></div>
+        <li class="link-drop-down">link</li>
       </ul>
     </div>
   </div>
   
   <div class="nav-bar-b">
-    <!--<div class="mobile-container">
-
-    <div class="topnav">
-      <a href="#home" class="active">Logo</a>
-      <div id="myLinks">
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
+    <div id="house" class="nav-item"></div>
+    <div href="index.html" class="nav-b-button" id="home">
+        <i class="fa fa-home"></i>
     </div>
-    </div>-->
-    <div id="text" class="nav-item active">HVHS</div>
+    <div id="text-b" class="nav-item active">HVHS</div>
     <div id="hamburger" class="nav-item"></div>
-    <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+    <div class="nav-b-button" id="burger" onclick="hamburger()">
       <i class="fa fa-bars"></i>
-    </a>
+    </div>
     <div id="drop-down-links">
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a href="parent-hub.html">Parent Hub</a>
+      <a href="student-hub.html">Student Hub</a>
+      <a href="about.html">About</a>
     </div>
   </div>
 
@@ -109,31 +83,18 @@
       <img src="images/HVH_LOGO.png" alt="HVHS-logo-body">
       <h2>About Our School</h2>
       <h3>Hutt Valley High School, Te Kura Tuarua o Te Awakairangi was founded in 1926. We focus on providing a high-quality education that ensures our students have the best opportunity to develop their strengths and talents and achieve success in a way that gives them a purposeful and rewarding future life.</h3>
-      <button class="home-learn-button">Learn More</button>
+      <h3>Hutt Valley High School is a calm, friendly, purposeful campus where students achieve incredible things. Our students are firmly at the centre of all we do – with student wellbeing as important as academic, cultural and sporting success.</h3>
+
+      <button onclick="linkClick('about.html')"class="home-button">Learn More</button>
+      <button onclick="linkClick('parent-hub.html')"class="home-button hub-button">Parent Hub</button>
+      <button  onclick="linkClick('student-hub.html')"class="home-button hub-button">Student Hub</button>
     </div>
     
     <div class="body-item" id="body-right">
       <img src="images/2-12.jpg" alt="HVHS-background-desktop">
     </div>
-
-
-    <div class="body-item" id="student-hub">
-      <img>
-      <!--<button class="home-right-button" id="student-button">Student Hub</button>-->
-    </div>
-    <div class="body-item" id="parent-hub">
-      <img>
-      <!--<button class="home-right-button" id="parent-button">Parent Hub</button>-->
-    </div>
-    
-
-    
-    
-    
     
   </div>
-  <!--<img src="images/7-2 (1).jpg">
-  <img src="images/1-4.jpg">-->
   
   <div class="main-body-b">
       
@@ -141,12 +102,55 @@
       <img class="mobile-background" src="images/2-12-gradient.jpg" alt="HVHS-background-mobile">
       <img class="mobile-logo" src="images/HVH_LOGO.png" alt="HVHS-logo-mobile">
       <div class="button-grid">
-        <button class="portrait-home-button" id="learn-button-portrait">About Our School</button>
-        <button class="portrait-home-button" id="parent-button-portrait">Parent Hub</button>
-        <button class="portrait-home-button" id="student-button-portrait">Student Hub</button>
+        <button onclick="linkClick('about.html')" class="portrait-home-button" id="learn-button-portrait">About Our School</button>
+        <button onclick="linkClick('parent-hub.html')" class="portrait-home-button" id="parent-button-portrait">Parent Hub</button>
+        <button onclick="linkClick('student-hub.html')" class="portrait-home-button" id="student-button-portrait">Student Hub</button>
       </div>
     </div>
   </div>
+
+  <div id="footer-a" class="ft-home">
+    <div class="ftcolgen ftcol1">
+      <h4 class="ftcol1 ft-hd1 ft-a"  
+        onclick="linksShowCl('ft-txt1')">Address </h4>
+      <h4 class="ftcol1 ft-hd1 ft-b"  
+        onclick="linksShowCl('ft-txt1')">Address ▼</h4>
+      <p class="ftcol1 ft-txt1">84-114 Woburn Road</p>
+      <p class="ftcol1 ft-txt1">Lower Hutt, 5010</p>
+      <p class="ftcol1 ft-txt1">Wellington</p>
+    </div>
+    <div class="ftcolgen ftcol2">
+      <h4 class="ftcol2 ft-hd2 ft-a" 
+        onclick="linksShowCl('ft-txt2')">Postal Address</h4>
+      <h4 class="ftcol2 ft-hd2 ft-b" 
+        onclick="linksShowCl('ft-txt2')">Postal Address ▼</h4>
+      <p class="ftcol2 ft-txt2">Private Bag, 31 909</p>
+      <p class="ftcol2 ft-txt2">Lower Hutt, 5040</p>
+      <p class="ftcol2 ft-txt2">Wellington</p>
+      <p class="ftcol2 ft-txt2">New Zealand</p>
+    </div>
+    <div class="ftcolgen ftcol3">
+      <h4 class="ftcol3  ft-hd3 ft-a"
+         onclick="linksShowCl('ft-txt3')">Quick Contact</h4>
+      <h4 class="ftcol3  ft-hd3 ft-b"
+         onclick="linksShowCl('ft-txt3')">Quick Contact ▼</h4>
+      <p class="ftcol3 ft-txt3">Office phone: +64 4 566 4584</p>
+      <p class="ftcol3 ft-txt3">Office email: office@hvhs.school.nz</p>
+      <p class="ftcol3 ft-txt3">Absences phone: +64 4 560 1568</p>
+      <p class="ftcol3 ft-txt3">Absences email: absences.notification@hvhs.school.nz</p>
+    </div>
+    <div class="ftcolgen ftcol4">
+      <h4 class="ftcol4 ft-hd4 ft-a"
+         onclick="linksShowCl('ft-txt4')">Social Media</h4>
+      <h4 class="ftcol4 ft-hd4 ft-b"
+         onclick="linksShowCl('ft-txt4')">Social Media ▼</h4>
+      <p class="ftcol4 ft-txt4">Facebook</p>
+      <p class="ftcol4 ft-txt4">Instagram</p>
+      <p class="ftcol4 ft-txt4">Newsletter</p>
+    </div>
+    <p id="ft-btm">© 2024 HUTT VALLEY HIGH SCHOOL | ALL RIGHTS RESERVED</p>
+  </div>
+  
   <script src="/modules/script.js"></script>
 </body>
 </html>
