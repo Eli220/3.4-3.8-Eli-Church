@@ -1,0 +1,111 @@
+#text {
+  grid-area: text;
+}
+
+#searchForm {
+  grid-area: search;
+}
+
+#nav-logo {
+  grid-area: logo;
+}
+
+#hamburger {
+  grid-area: hamburger;
+}
+
+#link-a {
+  grid-area: link-a;
+  border-left-style: none;
+}
+
+#link-b {
+  grid-area: link-b;
+}
+
+#link-c {
+  grid-area: link-c;
+}
+
+#link-d {
+  grid-area: link-d;
+}
+
+#link-e {
+  grid-area: link-e;
+  border-right-style: none;
+}
+
+
+/**#ft-btm {
+  grid-area: ft-btm;
+}**/
+
+
+
+#body-main {
+  grid-area: body-main;
+  height: 100%;
+  width: 100%;
+}
+
+#kamar {
+  grid-area: kamar;
+}
+
+#schoolbridge {
+  grid-area: schoolbridge;
+}
+
+#facebook {
+  grid-area: facebook;
+}
+
+#map {
+  grid-area: map;
+}
+
+#calendar {
+  grid-area: calendar;
+}
+
+#news {
+  grid-area: news;
+  img {
+    padding: 8px;
+  }
+}
+
+#events {
+  grid-area: events;
+  padding-top: 40px;
+}
+
+
+#learn-button-portrait {
+  grid-area: learn;
+  top: 20%;
+}
+#student-button-portrait {
+  grid-area: student;
+}
+#parent-button-portrait {
+  grid-area: parent;
+  right: 50%;
+}
+
+.ftcol1 {
+  grid-area: ftcol1;
+}
+
+.ftcol2 {
+  grid-area: ftcol2;
+}
+
+.ftcol3 {
+  grid-area: ftcol3;
+}
+
+.ftcol4 {
+  grid-area: ftcol4;
+}

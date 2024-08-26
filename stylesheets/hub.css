@@ -1,0 +1,268 @@
+#parent-body-a {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  /**grid-template-rows: auto auto auto auto;**/
+  grid-template-areas:
+    'left-img   parent-title   right-img'
+    'left-bar   parent-main    right-bar'
+    'left-grad  blank          right-grad'
+    'footer     footer         footer';
+}  
+
+#ft-gradient {
+  display: none;
+  grid-area: ft-grad;
+}
+
+.banner-image {
+  width: 100%;
+  position: absolute;
+  object-fit: contain;
+  grid-area: parent-banner;
+}
+
+#left-bar {
+  width: 100%;
+  object-fit: contain;
+  grid-area:  left-bar;
+  background-color: #32a0ad;
+}
+#left-img {
+  grid-area: left-img;
+  width: 100%;
+}
+#left-grad {
+  grid-area: left-grad;
+  width: 100%;
+}
+
+#right-bar {
+  width: 100%;
+  object-fit: contain;
+  grid-area: right-bar;
+  background-color: #32a0ad;
+}
+#right-img {
+  width: 100%;
+  grid-area: right-img;
+}
+#right-grad {
+  grid-area: right-grad;
+  width: 100%;
+}
+
+#parent-title {
+  grid-area: parent-title;
+  text-align: center;
+  color: #32a0ad;
+  font-size: 5vw;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
+#parent-mob-title{
+  display: none;
+  grid-area: parent-mob-t;
+}
+
+#parent-main {
+  grid-area: parent-main;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /**grid-template-rows: 1fr 3fr;**/
+  grid-template-areas:
+    'kamar schoolbridge facebook map calendar news'
+    'parent-links parent-links parent-links events events events';
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.icon-image {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid black;
+  padding: 6px;
+  border-radius: 16px;
+}
+
+.icon-text {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2vw;
+  font-weight: 450;
+  margin-top: 5px;
+}
+
+#parent-links {
+  margin-left: 60px;
+  margin-right: auto;
+  grid-area: parent-links;
+  padding-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3vw;
+    font-weight: 450;
+  }
+  li {
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 450;
+  }
+}
+
+#absences {
+  display: none;
+}
+
+#frontOffice {
+  display: none;
+}
+
+#slt {
+  display: none;
+}
+
+#allStaff {
+  display: none;
+}
+
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+  padding: 4px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  th {
+    color: white;
+    background-color: black;
+  }
+  .Caltime {
+    width: 25%;
+  }
+  .Calevent{
+    width: 75%;
+    padding-left: 8px;
+  }
+}
+
+
+
+@media (orientation: portrait) {
+
+  #parent-body-a {
+    grid-template-columns: 1fr;
+    /**grid-template-rows: 100% 100% 100%;**/
+    grid-template-areas:
+      /**'parent-mob-t'**/
+      'parent-title'
+      'parent-main'
+      'ft-grad'
+      'footer';
+    background-color: #32a0ad;
+    color: white;
+  }  
+  #ft-gradient {
+    display: block;
+    width: 100%;
+  }
+  #parent-title {
+    font-size: 12vw;
+    color: white;
+  }
+  /**#parent-mob-title{
+    display: inline;
+    width: 100%;
+  }**/
+  
+  #parent-main {
+    grid-template-columns: 1fr 1fr 1fr;
+    /**grid-template-rows: 1fr 0.2fr 1fr 1fr;**/
+    grid-template-areas:
+    'kamar schoolbridge facebook' 
+    'map calendar news'
+    'parent-links parent-links parent-links' 
+    'events events event';
+    img {
+      width: 80%;
+    }
+    /**padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;**/
+  }
+
+  table, th, td {
+    border: 1px solid white;
+    width: max-content;
+    
+    th {
+      color: #32a0ad;
+      background-color: white;
+    }
+  }
+
+  .icon-image {
+    border: 2px solid black;
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+  }
+  .icon-text {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5vw;
+    font-weight: 550;
+  }
+
+  #parent-links {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 30px;
+    h3 {
+      font-size: 9vw;
+      font-weight: 450;
+    }
+    li {
+      font-size: 5vw;
+      font-weight: 450;
+    }
+  }
+
+  #left-bar {
+    display: none;
+  }
+  #left-img {
+    display: none;
+  }
+  #left-grad {
+    display: none;
+  }
+  #right-bar {
+    display: none;
+  }
+  #right-img {
+    display: none;
+  }
+  #right-grad {
+    display: none;
+  }
+  
+  /**#parent-body-b {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      'kamar schoolbridge facebook map calendar news'
+      'parent-links parent-links parent-links events events event';
+    padding-left: 40px;
+    padding-right: 40px;
+  }**/
+}
