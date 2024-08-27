@@ -21,60 +21,61 @@
 </head>
 
 <body>
-  <!-------------- NAV -------------->
+  <!--************* NAV *************-->
   <div class="nav-bar-a">
     <h1 id="text" class="nav-item">Hutt Valley High School</h1>
     <form id="searchForm" class="nav-item">
       <input type="text" id="searchTxt" placeholder="Search...">
-      <label for="searchTxt"></label>
-      <button type="submit" aria-label="Search Button"><i class="fa fa-search"></i></button>
+      <label for="searchTxt" class="visually-hidden">label</label>
+      <button type="submit" title="search-button"><i class="fa fa-search"></i></button>
     </form>
     <div id="nav-logo" class="nav-item">
       <img src="images/logo-white.png" alt="HVHS-logo-desktop">
-    </div>
+    </div> <!-- image end -->
     <div id="link-a" class="nav-link">
       <button class="nav-button" onclick="linkClick('index.html')">Home</button>
-    </div>
+    </div> <!-- link end -->
     <div id="link-b" class="nav-link">
       <button class="nav-button" onclick="linkClick('student-hub.html')">Student Hub</button>
-    </div>
+    </div> <!-- link end -->
     <div id="link-c" class="nav-link">
       <button class="nav-button" onclick="linkClick('about.html')">About Our School</button>
-    </div>
+    </div> <!-- link end -->
     <div id="link-d" class="nav-link">
       <button class="nav-button">Contact Us</button>
       <ul>
-        <li class="link-drop-down">Office phone: +64 4 566 4584</li>
-        <li class="link-drop-down">Office email: office@hvhs.school.nz</li>
-        <li class="link-drop-down">Absences phone: +64 4 560 1568</li>
-        <li class="link-drop-down">Absences email: absences.notification@hvhs.school.nz</li>
+        <li class="link-drop-down">link</li>
       </ul>
-    </div>
+    </div> <!-- link end -->
     <div id="link-e" class="nav-link">
       <button class="nav-button">Online Services</button>
       <ul>
-        <li class="link-drop-down">link</li>
+        <li class="link-drop-down" onclick="linkClickNew('https://hvhs.school.kiwi')">Kamar</li>
+        <li class="link-drop-down" onclick="linkClickNew('https://login.bridge.school.nz/#step-account-types')">Schoolbridge</li>
+        <li class="link-drop-down" onclick="linkClickNew('https://nz.accessit.online/HTT00/#!dashboard')">Library</li>
+        <li class="link-drop-down" onclick="linkClickNew('https://www.careercentral.school.nz/')">Careers</li>
+
       </ul>
-    </div>
-  </div>
+    </div> <!-- link end -->
+  </div> <!---- Nav Bar A End ---->
 
   <div class="nav-bar-b">
     <div id="house" class="nav-item"></div>
     <div onclick="linkClick('index.html')" class="nav-b-button" id="home">
         <i class="fa fa-home"></i>
-    </div>
+    </div> <!-- home end -->
     <div id="text-b" class="nav-item active">HVHS</div>
     <div id="hamburger" class="nav-item"></div>
     <div class="nav-b-button" id="burger" onclick="hamburger()">
       <i class="fa fa-bars"></i>
-    </div>
+    </div> <!-- burger end -->
     <div id="drop-down-links">
       <a href="student-hub.html">Student Hub</a>
       <a href="about.html">About</a>
-    </div>
-  </div>
+    </div> <!-- Drop downs end -->
+  </div> <!---- Nav Bar B End ---->
 
-  <!-------------- BODY -------------->
+  <!--************* BODY *************-->
 
   <div id="parent-body-a">
     <div id="left-bar"></div>
@@ -184,7 +185,8 @@
     </div>
 
     <img src="images/gradient-m.jpg" alt="footer gradient" id="ft-gradient">
-    
+
+    <!--************* FOOTER *************-->
     <div id="footer-a" class="ft-hub">
       <div class="ftcolgen ftcol1">
         <h4 class="ftcol1 ft-hd1 ft-a"  

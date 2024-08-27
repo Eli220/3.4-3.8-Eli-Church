@@ -7,97 +7,225 @@
   <meta name="description" content="Hutt Valley High School">
   <meta name="keywords" content="School, HVHS, Hutt valley, Hutt valley high school">
   <meta name="author" content="Eli Church">
-  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> </script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>Hutt Valley High School</title>
   <link rel="icon" type="image/x-icon" href="/images/page-icon.png">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/hub.css" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/home.css" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/grid-id.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-<!-------------- NAV -------------->
+  <!--************* NAV *************-->
   <div class="nav-bar-a">
     <h1 id="text" class="nav-item">Hutt Valley High School</h1>
     <form id="searchForm" class="nav-item">
       <input type="text" id="searchTxt" placeholder="Search...">
-      <label for="searchTxt"></label>
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <label for="searchTxt" class="visually-hidden">label</label>
+      <button type="submit" title="search-button"><i class="fa fa-search"></i></button>
     </form>
     <div id="nav-logo" class="nav-item">
-      <img 
-        src="images/logo-white.png" alt="HVHS-logo-desktop">
-    </div>
-    <!--<div id="translate-box" class="nav-item">
-      <div id="google_translate_element"></div>
-    </div>-->
+      <img src="images/logo-white.png" alt="HVHS-logo-desktop">
+    </div> <!-- image end -->
     <div id="link-a" class="nav-link">
-      <button class="nav-button">Parent Hub</button>
-      <ul>
-        <div class="link-drop-down"><a>link</a></div>
-      </ul>
-    </div>
+      <button class="nav-button" onclick="linkClick('index.html')">Home</button>
+    </div> <!-- link end -->
     <div id="link-b" class="nav-link">
-      <button class="nav-button">Student Hub</button>
-      <ul>
-        <div class="link-drop-down"><a>link</a></div>
-      </ul>
-    </div>
+      <button class="nav-button" onclick="linkClick('parent-hub.html')">Parent Hub</button>
+    </div> <!-- link end -->
     <div id="link-c" class="nav-link">
-      <button class="nav-button">About Our School</button>
-      <ul>
-        <div class="link-drop-down"><a>link</a></div>
-      </ul>
-    </div>
+      <button class="nav-button" onclick="linkClick('about.html')">About Our School</button>
+    </div> <!-- link end -->
     <div id="link-d" class="nav-link">
       <button class="nav-button">Contact Us</button>
       <ul>
-        <div class="link-drop-down"><a>link</a></div>
+        <li class="link-drop-down">link</li>
       </ul>
-    </div>
+    </div> <!-- link end -->
     <div id="link-e" class="nav-link">
       <button class="nav-button">Online Services</button>
       <ul>
-        <div class="link-drop-down"><a>link</a></div>
+        <li class="link-drop-down">link</li>
       </ul>
-    </div>
-  </div>
+    </div> <!-- link end -->
+  </div> <!---- Nav Bar A End ---->
 
   <div class="nav-bar-b">
-    <!--<div class="mobile-container">
-
-    <div class="topnav">
-      <a href="#home" class="active">Logo</a>
-      <div id="myLinks">
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    </div>-->
-    <div id="text" class="nav-item active">HVHS</div>
+    <div id="house" class="nav-item"></div>
+    <div onclick="linkClick('index.html')" class="nav-b-button" id="home">
+        <i class="fa fa-home"></i>
+    </div> <!-- home end -->
+    <div id="text-b" class="nav-item active">HVHS</div>
     <div id="hamburger" class="nav-item"></div>
-    <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+    <div class="nav-b-button" id="burger" onclick="hamburger()">
       <i class="fa fa-bars"></i>
-    </a>
+    </div> <!-- burger end -->
     <div id="drop-down-links">
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a href="parent-hub.html">Parent Hub</a>
+      <a href="about.html">About</a>
+    </div> <!-- Drop downs end -->
+  </div> <!---- Nav Bar B End ---->
+
+  <!--************* BODY *************-->
+
+  <div id="parent-body-a">
+    <div id="left-bar"></div>
+    <img src="images/left-bar.jpg" alt="left-image" id="left-img">
+    <img src="images/gradient.jpg" alt="right-image" id="left-grad">
+
+    <div id="right-bar"></div>
+    <img src="images/right-bar.jpg" alt="right-image" id="right-img">
+    <img src="images/gradient.jpg" alt="right-image" id="right-grad">
+
+    <h2 id="parent-title">Student Hub</h2>
+    <img src="images/parent-mob.jpg" alt="parent-hub" id="parent-mob-title">
+
+    <div id="parent-main">
+      <div id="kamar" class="icon">
+        <img src="images/kamar.png" class="icon-image" alt="kamar" onclick="linkClickNew('https://hvhs.school.kiwi')">
+        <p class="icon-text">Kamar</p>
+      </div>
+      <div id="schoolbridge" class="icon">
+        <img src="images/schoolbridge.jpg" class="icon-image" alt="schoolbridge" onclick="linkClickNew('https://login.bridge.school.nz/#step-account-types')">
+        <p class="icon-text">Schoolbridge</p>
+      </div>
+      <div id="facebook" class="icon">
+        <img src="images/facebook.jpg" class="icon-image" alt="facebook" onclick="linkClickNew('https://www.instagram.com/hvhsofficial/')">
+        <p class="icon-text">Instagram</p>
+      </div>
+      <div id="map"  class="icon">
+        <img src="images/news.png" class="icon-image" alt="news" onclick="linkClickNew('https://hvhs.school.nz/newsletter-archive/')">
+        <p class="icon-text">Newsletter</p>
+      </div>
+      <div id="news" class="icon">
+        <img src="images/calendar.png" class="icon-image" alt="calendar" onclick="linkClickNew('https://hvhs.school.nz/school-calendar/')">
+        <p class="icon-text">Calendar</p>
+      </div>
+      <div id="calendar" class="icon">
+        <img src="images/map.png" class="icon-image" alt="map" onclick="linkClickNew('https://hvhs.school.nz/facilties-schoolmap/')">
+        <p class="icon-text">School Map</p>
+      </div>
+      <div id="parent-links">
+        <h3>Contact Links</h3>
+        <ul>
+          <li onclick="linksShow('absences')"><u>Absences</u>
+            <ul id="absences">
+              <li>Phone: 0123456789</li>
+              <li><a>Email: example@gmail.com</a></li>
+            </ul>
+          </li>
+          <li onclick="linksShow('frontOffice')"><u>Front Office</u>
+            <ul id="frontOffice">
+              <li>Phone: 0123456789</li>
+              <li><a>Email: example@gmail.com</a></li>
+            </ul>
+          </li>
+          <li onclick="linksShow('slt')"><u>Senior Leadership</u> 
+            <ul id="slt">
+              <li>Principal: example@gmail.com</li>
+              <li>Deputy Principal: example@gmail.com</li>
+            </ul>
+          </li>
+          <li onclick="linksShow('allStaff')"><u>All Staff Emails</u>  
+            <ul id="allStaff">
+              <li><a><u>List of all staff with addresses</u></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div id="events">
+        <table>
+          <tr>
+            <th colspan="2">Today</th>
+          </tr>
+          <tr>
+            <td class="Caltime">9:00 AM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">10:00 AM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">11:00 AM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">12:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">1:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">2:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">3:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+          <tr>
+            <td class="Caltime">4:00 PM</td>
+            <td class="Calevent">joseph mellor</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <img src="images/gradient-m.jpg" alt="footer gradient" id="ft-gradient">
+
+    <!--************* FOOTER *************-->
+    <div id="footer-a" class="ft-hub">
+      <div class="ftcolgen ftcol1">
+        <h4 class="ftcol1 ft-hd1 ft-a"  
+          onclick="linksShowCl('ft-txt1')">Address </h4>
+        <h4 class="ftcol1 ft-hd1 ft-b"  
+          onclick="linksShowCl('ft-txt1')">Address ▼</h4>
+        <p class="ftcol1 ft-txt1">84-114 Woburn Road</p>
+        <p class="ftcol1 ft-txt1">Lower Hutt, 5010</p>
+        <p class="ftcol1 ft-txt1">Wellington</p>
+      </div>
+      <div class="ftcolgen ftcol2">
+        <h4 class="ftcol2 ft-hd2 ft-a" 
+          onclick="linksShowCl('ft-txt2')">Postal Address</h4>
+        <h4 class="ftcol2 ft-hd2 ft-b" 
+          onclick="linksShowCl('ft-txt2')">Postal Address ▼</h4>
+        <p class="ftcol2 ft-txt2">Private Bag, 31 909</p>
+        <p class="ftcol2 ft-txt2">Lower Hutt, 5040</p>
+        <p class="ftcol2 ft-txt2">Wellington</p>
+        <p class="ftcol2 ft-txt2">New Zealand</p>
+      </div>
+      <div class="ftcolgen ftcol3">
+        <h4 class="ftcol3  ft-hd3 ft-a"
+           onclick="linksShowCl('ft-txt3')">Quick Contact</h4>
+        <h4 class="ftcol3  ft-hd3 ft-b"
+           onclick="linksShowCl('ft-txt3')">Quick Contact ▼</h4>
+        <p class="ftcol3 ft-txt3">Office phone: +64 4 566 4584</p>
+        <p class="ftcol3 ft-txt3">Office email: office@hvhs.school.nz</p>
+        <p class="ftcol3 ft-txt3">Absences phone: +64 4 560 1568</p>
+        <p class="ftcol3 ft-txt3">Absences email: absences.notification@hvhs.school.nz</p>
+      </div>
+      <div class="ftcolgen ftcol4">
+        <h4 class="ftcol4 ft-hd4 ft-a"
+           onclick="linksShowCl('ft-txt4')">Social Media</h4>
+        <h4 class="ftcol4 ft-hd4 ft-b"
+           onclick="linksShowCl('ft-txt4')">Social Media ▼</h4>
+        <p class="ftcol4 ft-txt4">Facebook</p>
+        <p class="ftcol4 ft-txt4">Instagram</p>
+        <p class="ftcol4 ft-txt4">Newsletter</p>
+      </div>
+      <p id="ft-btm">© 2024 HUTT VALLEY HIGH SCHOOL | ALL RIGHTS RESERVED</p>
     </div>
   </div>
 
-  <!-------------- BODY -------------->
-
-  <div class="main-body-a">
-    <img src="student-hub.jpg" alt="student-hub-banner" class="banner-image">
-  </div>
+  <script src="/modules/script.js"></script>
+</body>
+</html>
