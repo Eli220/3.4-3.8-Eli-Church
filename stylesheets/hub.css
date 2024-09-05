@@ -64,6 +64,51 @@
   padding: 20px;
 }
 
+#about-body-m {
+  height:1000px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'about-title'
+    'text-1'
+    'text-2'
+    'text-3'
+    'footer';
+  background-color: #32a0ad;
+  color: white;
+  grid-template-rows: 100px;
+}
+#about-title {
+  grid-area: about-title;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  font-size: 6vw;
+}
+.about-text {
+  text-align: center;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  font-size: 5vw;
+}
+#about-text-1 {
+  grid-area: text-1;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+#about-text-2 {
+  grid-area: text-2;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+#about-text-3 {
+  grid-area: text-3;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
 #parent-mob-title{
   display: none;
   grid-area: parent-mob-t;
@@ -119,7 +164,6 @@
   font-weight: 450;
 }
 
-
 #absences {
   display: none;
 }
@@ -152,11 +196,11 @@ th {
 }
 
 .Caltime {
-  width: 25%;
+  width: 30%;
 }
   
 .Calevent{
-  width: 75%;
+  width: 70%;
   padding-left: 8px;
 }
 
@@ -199,7 +243,7 @@ th {
 
   table, th, td {
     border: 1px solid white;
-    width: max-content;
+    width: 100%;
   }
   
   th {
@@ -232,6 +276,9 @@ th {
   #parent-links li {
     font-size: 5vw;
     font-weight: 450;
+  }
+  #events {
+    width: 145%;
   }
 
   #left-bar {

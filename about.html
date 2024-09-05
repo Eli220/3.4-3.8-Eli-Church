@@ -1,1 +1,148 @@
-<h1>kurwa</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Hutt Valley High School">
+  <meta name="keywords" content="School, HVHS, Hutt valley, Hutt valley high school">
+  <meta name="author" content="Eli Church">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"> 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Hutt Valley High School</title>
+  <link rel="icon" type="image/x-icon" href="/images/page-icon.png">
+  <link href="stylesheets/home.css" rel="stylesheet" type="text/css"/>
+  <link href="stylesheets/grid-id.css" rel="stylesheet" type="text/css"/>
+  <link href="stylesheets/hub.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<!--************* NAV *************-->
+  <div class="nav-bar-a">
+    <h1 id="text" class="nav-item">Hutt Valley High School</h1>
+    <form id="searchForm" class="nav-item">
+      <input type="text" id="searchTxt" placeholder="Search...">
+      <label for="searchTxt" class="visually-hidden">label</label>
+      <button type="submit" title="search-button"><i class="fa fa-search"></i></button>
+    </form>
+    <div id="nav-logo" class="nav-item">
+      <img src="images/logo-white.png" alt="HVHS-logo-desktop">
+    </div> <!-- image end -->
+    <div id="link-a" class="nav-link">
+      <button class="nav-button" onclick="linkClick('parent-hub.html')">Parent Hub</button>
+    </div> <!-- link end -->
+    <div id="link-b" class="nav-link">
+      <button class="nav-button" onclick="linkClick('student-hub.html')">Student Hub</button>
+    </div> <!-- link end -->
+    <div id="link-c" class="nav-link">
+      <button class="nav-button" onclick="linkClick('index.html')">Home</button>
+    </div> <!-- link end -->
+    <div id="link-d" class="nav-link">
+      <button class="nav-button">Contact Us</button>
+      <ul>
+        <li class="link-drop-down">link</li>
+      </ul>
+    </div> <!-- link end -->
+    <div id="link-e" class="nav-link">
+      <button class="nav-button">Online Services</button>
+      <ul>
+        <li class="link-drop-down">link</li>
+      </ul>
+    </div> <!-- link end -->
+  </div> <!---- Nav Bar A End ---->
+  
+  <div class="nav-bar-b">
+    <div id="house" class="nav-item"></div>
+    <div onclick="linkClick('index.html')" class="nav-b-button" id="home">
+        <i class="fa fa-home"></i>
+    </div> <!-- home end -->
+    <div id="text-b" class="nav-item active">HVHS</div>
+    <div id="hamburger" class="nav-item"></div>
+    <div class="nav-b-button" id="burger" onclick="hamburger()">
+      <i class="fa fa-bars"></i>
+    </div> <!-- burger end -->
+    <div id="drop-down-links">
+      <a href="parent-hub.html">Parent Hub</a>
+      <a href="student-hub.html">Student Hub</a>
+    </div> <!-- Drop downs end -->
+  </div> <!---- Nav Bar B End ---->
+
+<!--************* BODY *************-->
+  
+  <div class="main-body-a">
+    
+    <div class="body-item" id="body-left">
+      <img src="images/home.webp" alt="HVHS-background-desktop">
+    </div> <!-- body left end -->
+    
+    <div class="body-item" id="body-middle">
+      <img src="images/HVH_LOGO.png" alt="HVHS-logo-body">
+      <h2>Nau mai haere mai ki tēnei Te Kura Tuarua o Te Awakairangi.</h2>
+      <h3>We welcome you to Hutt Valley High School.</h3>
+      <h3>We are a vibrant, co-educational and multicultural school with an outstanding reputation for preparing students well for their futures. We offer high-quality education in an inclusive, positive and nurturing environment. Our students are firmly at the centre of all we do – with student wellbeing as important as academic, cultural and sporting success.</h3>
+      <h3>People from many different cultures, languages and countries attend Hutt Valley High School, bringing broad and varying experiences – it is what makes this place so unique. We support students to develop the confidence to celebrate their culture, difference, and individuality while at the same time helping them to accept people who are different from themselves.</h3>
+      <button onclick="linkClick('https://hvhs.school.nz/how-to-enrol/')" class="home-button">Enrol Here for 2025</button>
+    </div> <!-- body middle end -->
+    
+    <div class="body-item" id="body-right">
+      <img src="images/home.webp" alt="HVHS-background-desktop">
+    </div> <!-- body right end -->
+  </div> <!---- Main Body A End ---->
+  
+  <div class="main-body-b" id="about-body-m">  
+    <h2 id="about-title">Nau mai haere mai ki tēnei Te Kura Tuarua o Te Awakairangi.</h2>
+    <h3 class="about-text" id="about-text-1">We welcome you to Hutt Valley High School.</h3>
+    <h3 class="about-text" id="about-text-2">We are a vibrant, co-educational and multicultural school with an outstanding reputation for preparing students well for their futures. We offer high-quality education in an inclusive, positive and nurturing environment. Our students are firmly at the centre of all we do – with student wellbeing as important as academic, cultural and sporting success.</h3>
+    <h3 class="about-text" id="about-text-3">People from many different cultures, languages and countries attend Hutt Valley High School, bringing broad and varying experiences – it is what makes this place so unique. We support students to develop the confidence to celebrate their culture, difference, and individuality while at the same time helping them to accept people who are different from themselves.</h3>
+  </div> <!---- Main Body B End ---->
+
+  <!--************* FOOTER *************-->
+  <div id="footer-a" class="ft-home">
+    <div class="ftcolgen ftcol1">
+      <h4 class="ftcol1 ft-hd1 ft-a"  
+        onclick="linksShowCl('ft-txt1')">Address </h4>
+      <h4 class="ftcol1 ft-hd1 ft-b"  
+        onclick="linksShowCl('ft-txt1')">Address ▼</h4>
+      <p class="ftcol1 ft-txt1">84-114 Woburn Road</p>
+      <p class="ftcol1 ft-txt1">Lower Hutt, 5010</p>
+      <p class="ftcol1 ft-txt1">Wellington</p>
+    </div> <!-- ft col end -->
+    <div class="ftcolgen ftcol2">
+      <h4 class="ftcol2 ft-hd2 ft-a" 
+        onclick="linksShowCl('ft-txt2')">Postal Address</h4>
+      <h4 class="ftcol2 ft-hd2 ft-b" 
+        onclick="linksShowCl('ft-txt2')">Postal Address ▼</h4>
+      <p class="ftcol2 ft-txt2">Private Bag, 31 909</p>
+      <p class="ftcol2 ft-txt2">Lower Hutt, 5040</p>
+      <p class="ftcol2 ft-txt2">Wellington</p>
+      <p class="ftcol2 ft-txt2">New Zealand</p>
+    </div> <!-- ft col end -->
+    <div class="ftcolgen ftcol3">
+      <h4 class="ftcol3  ft-hd3 ft-a"
+         onclick="linksShowCl('ft-txt3')">Quick Contact</h4>
+      <h4 class="ftcol3  ft-hd3 ft-b"
+         onclick="linksShowCl('ft-txt3')">Quick Contact ▼</h4>
+      <p class="ftcol3 ft-txt3">Office phone: +64 4 566 4584</p>
+      <p class="ftcol3 ft-txt3">Office email: office@hvhs.school.nz</p>
+      <p class="ftcol3 ft-txt3">Absences phone: +64 4 560 1568</p>
+      <p class="ftcol3 ft-txt3">Absences email: absences.notification@hvhs.school.nz</p>
+    </div> <!-- ft col end -->
+    <div class="ftcolgen ftcol4">
+      <h4 class="ftcol4 ft-hd4 ft-a"
+         onclick="linksShowCl('ft-txt4')">Social Media</h4>
+      <h4 class="ftcol4 ft-hd4 ft-b"
+         onclick="linksShowCl('ft-txt4')">Social Media ▼</h4>
+      <p class="ftcol4 ft-txt4">Facebook</p>
+      <p class="ftcol4 ft-txt4">Instagram</p>
+      <p class="ftcol4 ft-txt4">Newsletter</p>
+    </div> <!-- ft col end -->
+    <p id="ft-btm">© 2024 HUTT VALLEY HIGH SCHOOL | ALL RIGHTS RESERVED</p>
+  </div> <!---- Footer end ---->
+  
+  <script src="/modules/script.js"></script>
+</body>
+</html>

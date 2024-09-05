@@ -333,6 +333,7 @@ body {
 
   .nav-bar-b {
     display: block;
+    
     background-color: black;
     overflow: hidden;
     position: relative;
@@ -358,6 +359,15 @@ body {
     display: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 550;
+  }
+
+  .nav-bar-b a {
+    display: block;
+    font-weight: 650;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 5.5vw;
   }
 
   .nav-b-button {
